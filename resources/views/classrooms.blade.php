@@ -14,10 +14,10 @@
 
         <div class="main-page">
             <div class="page-title">
-                <p>--ادارة الصفوف--</p>
+                <p>ادارة الصفوف</p>
             </div>
 
-            <div class="msin-page-2">
+            <div class="msin-page-2 classrooms-page">
                 <form class="container-div classrooms-inputs-div" action="/dashboard/classrooms" method="POST">
                      @csrf
 
@@ -44,9 +44,33 @@
                     </div>
                     <div class="buttons-div">
                         <button type="submit">اضافة</button>
-                        <button>الغاء</button>
+                      
                     </div>
                 </form>
+                <div class="container-div classrooms-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>اسم الصف</th>
+                                <th> السعة</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if ($classrooms)
+                                @foreach ($classrooms as $classroom )
+                                     <tr>
+                                <td> {{ $classroom->name }}</td>
+                                <td>{{ $classroom->capacity }}</td>
+                                <td onclick="showClassroomInfo()" class="more-classroom-info"><a href="#">. . .</a></td>
+                            </tr>
+                                @endforeach
+                            @endif
+                           
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container-div classroom-info-div" id="classroom-info-div"></div>
             </div>
 
         </div>

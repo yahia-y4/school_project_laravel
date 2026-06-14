@@ -11,8 +11,8 @@ class ClassroomsController extends Controller
 
     public function index()
     {
-        $classroom = Classroom::all();
-        return view('classrooms', compact('classroom'));
+        $classrooms = Classroom::all();
+        return view('classrooms', compact('classrooms'));
     }
 
     public function store(Request $req)

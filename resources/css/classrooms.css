@@ -1,5 +1,26 @@
+
+.classrooms-page{
+    
+    justify-content: center;
+    gap: 30px;
+}
 .classrooms-inputs-div{
     width: 20%;
     height: 400px;
     align-items: center;
+}
+.classrooms-list{
+    width: 30%;
+}
+
+.more-classroom-info{
+
+    background-color: rgba(144, 215, 243, 0.589);
+    width: 50px;
+    cursor: pointer;
+}
+
+.classroom-info-div{
+    width: 50%;
+    display: none;
 }
