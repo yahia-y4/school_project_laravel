@@ -21,13 +21,13 @@
 
                 <div class="container-div classroom-info-div" id="classroom-info-div">
                        <div class="buttons-div">
-                        <a href=""><button>تعديل</button></a>
-                        <a href=""><button>حذف</button></a>
+                    <button>تعديل</button>
+                        <a href="{{ route('deleteClassroom',$classroom->id) }}"><button>حذف</button></a>
                         <a href={{ route('classrooms') }}><button>الغاء</button></a>
                     </div>
 
                     <div class="info-div">
-                        
+
                         <p> {{ $classroom->name }}</p>
                         <p>السعة : {{ $classroom->capacity }}</p>
                         <p>عدد الطلاب : {{ $students->count()}}</p>

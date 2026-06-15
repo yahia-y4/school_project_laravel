@@ -44,4 +44,10 @@ class ClassroomsController extends Controller
     return redirect('/dashboard/classrooms');
 
     }
+
+
+    public function delete($id){
+     Classroom::find($id)->delete();
+        return redirect('/dashboard/classrooms/');
+    }
 }
