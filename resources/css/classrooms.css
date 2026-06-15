@@ -5,12 +5,12 @@
     gap: 30px;
 }
 .classrooms-inputs-div{
-    width: 20%;
+    width: 40%;
     height: 400px;
     align-items: center;
 }
 .classrooms-list{
-    width: 30%;
+    width: 40%;
 }
 
 .more-classroom-info{
@@ -21,6 +21,28 @@
 }
 
 .classroom-info-div{
-    width: 50%;
-    display: none;
+    width: 60%;
+}
+.description-div{
+  
+    padding: 10px;
+    height: 150px;
+}
+.students-teachers-tables-div{
+    display: flex;
+    width: 100%;
+    height: 400px;
+
+}
+.students-teachers-tables-div div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-top: #fff 1px solid;
+  
+}
+.students-table{
+    border-left: 1px solid #fff;
 }

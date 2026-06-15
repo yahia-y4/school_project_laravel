@@ -6,4 +6,12 @@ function showClassroomInfo(id,name,capacity,description){
 
     
 }
-window.showClassroomInfo = showClassroomInfo;
+
+function hideClassroomInfo(id,name,capacity,description){
+    const classRoom = document.getElementById("classroom-info-div")
+    if(!classRoom) return
+    classRoom.style.display="none";
+
+
+    
+}

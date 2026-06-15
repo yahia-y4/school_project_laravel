@@ -8,7 +8,7 @@ use App\Http\Controllers\ClassroomsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::get('/dashboard', function () {
@@ -22,8 +22,9 @@ Route::middleware('auth')->group(function () {
 
 
     // -------classrooms routes------
-    Route::get('/dashboard/classrooms',[ClassroomsController::class,'index']);
+    Route::get('/dashboard/classrooms',[ClassroomsController::class,'index'])->name('classrooms');
     Route::post('/dashboard/classrooms',[ClassroomsController::class,'store']);
+    Route::get('/dashboard/classrooms/one/{id}',[ClassroomsController::class,'showClassInfo']);
     //-------------------------------
 
 

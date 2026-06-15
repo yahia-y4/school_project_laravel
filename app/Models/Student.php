@@ -14,5 +14,9 @@ class Student extends Model
         "classroom_id",
     ];
 
+    public function classroom(){
+        return $this->belongsTo(Classroom::class);
+    }
+
 
 }

@@ -73,6 +73,7 @@
                     <table>
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>الاسم</th>
                                 <th>البريد الالكترون</th>
                                 <th>الرقم</th>
@@ -86,6 +87,7 @@
                             @if ($students)
                                 @foreach ($students as $std)
                                     <tr>
+                                        <td>{{ $std->id }}</td>
                                         <td>{{ $std->name }}</td>
                                         <td>{{ $std->email }}</td>
                                         <td>{{ $std->phone }}</td>

@@ -15,4 +15,10 @@ class Classroom extends Model
     protected $casts = [
     'capacity' => 'integer',
 ];
+public function students(){
+    return $this->hasMany(Student::class);
+}
+public function teachers(){
+    return $this->hasMany(Teacher::class);
+}
 }

@@ -7,7 +7,7 @@
 
         @vite(['resources/css/students.css', 'resources/js/teachers.js'])
 
-        <title>الطلاب</title>
+        <title>المعلمين</title>
     </head>
 
     <body>
@@ -15,7 +15,7 @@
 
         <div class="main-page">
             <div class="page-title">
-                <p>ادارة الطلاب</p>
+                <p>ادارة المعلمين</p>
             </div>
             <div class="msin-page-2 students-mian-page">
                 <form class="container-div students-inputs-div" action="/dashboard/teachers" method="POST">
@@ -73,6 +73,7 @@
                     <table>
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>الاسم</th>
                                 <th>البريد الالكترون</th>
                                 <th>الرقم</th>
@@ -86,6 +87,7 @@
                             @if ($teachers)
                                 @foreach ($teachers as $teacher)
                                     <tr>
+                                        <td>{{ $teacher->id }}</td>
                                         <td>{{ $teacher->name }}</td>
                                         <td>{{ $teacher->email }}</td>
                                         <td>{{ $teacher->phone }}</td>
