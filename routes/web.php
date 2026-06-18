@@ -31,14 +31,14 @@ Route::middleware('auth')->group(function () {
 
 
     // -------students routes------
-    Route::get('/dashboard/students',[StudentController::class,'index']);
+    Route::get('/dashboard/students',[StudentController::class,'index'])->name('students');
     Route::post('/dashboard/students',[StudentController::class,'store']);
     Route::get('/dashboard/students/delete/{id}',[StudentController::class,'deleteStd']);
     Route::post('/dashboard/students/edit/{id}',[StudentController::class,'editStd']);
     //---------------------------
 
     //--------teachers routes------------  
-    Route::get('/dashboard/teachers',[TeachersController::class,'index']);
+    Route::get('/dashboard/teachers',[TeachersController::class,'index'])->name('teachers');
     Route::post('/dashboard/teachers',[TeachersController::class,'store']);
     Route::get('/dashboard/teachers/delete/{id}',[TeachersController::class,'deleteTeacher']);
     Route::post('/dashboard/teachers/edit/{id}',[TeachersController::class,'editTeacher']);

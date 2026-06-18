@@ -11,6 +11,15 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('لوحة التحكم') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('classrooms')" :active="request()->routeIs('classrooms')">
+                        {{ __('الصفوف') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('students')" :active="request()->routeIs('students')">
+                        {{ __('الطلاب') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('teachers')" :active="request()->routeIs('teachers')">
+                        {{ __('المعلمين') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -18,9 +27,9 @@
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button
+                        <div
                             class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+                            <div>{{ Auth::user()?->name }}</div>
 
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +39,11 @@
                                         clip-rule="evenodd" />
                                 </svg>
                             </div>
-                        </button>
+                        </div>
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
+                      
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
@@ -79,8 +86,8 @@
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                <div class="font-medium text-base text-gray-800">{{ Auth::user()?->name }}</div>
+                <div class="font-medium text-sm text-gray-500">{{ Auth::user()?->email }}</div>
             </div>
 
             <div class="mt-3 space-y-1">

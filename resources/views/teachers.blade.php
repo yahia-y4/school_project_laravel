@@ -105,8 +105,8 @@
                                                 {{ Js::from($teacher->phone) }},
                                                 {{ $teacher->classroom_id }},
                                             )"
-                                            class="table-buttun" style="background-color: rgba(75, 172, 218, 0.664)">تعديل</td>
-                                        <td class="table-buttun" style="background-color: rgba(255, 0, 0, 0.61)">
+                                            class="table-buttun" style="background-color:  rgba(101, 75, 218, 0.322)">تعديل</td>
+                                        <td class="table-buttun" style="background-color: rgba(255, 0, 0, 0.349)">
                                             <a href="/dashboard/teachers/delete/{{ $teacher->id }}">حذف</a>
                                         </td>
 
