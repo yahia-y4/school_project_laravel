@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/dashboard/classrooms',[ClassroomsController::class,'store']);
     Route::get('/dashboard/classrooms/one/{id}',[ClassroomsController::class,'showClassInfo']);
     Route::get('/dashboard/classrooms/delete/{id}',[ClassroomsController::class,'delete'])->name("deleteClassroom");
+    Route::post('/dashboard/classrooms/edit/{id}',[ClassroomsController::class,'edit'])->name("editClassroom");
     //-------------------------------
 
 

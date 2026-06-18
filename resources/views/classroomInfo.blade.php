@@ -21,7 +21,7 @@
 
                 <div class="container-div classroom-info-div" id="classroom-info-div">
                        <div class="buttons-div">
-                    <button>تعديل</button>
+                    <button onclick="showClassroomEdit({{  $classroom->id}},'{{ $classroom->name }}','{{ $classroom->capacity }}','{{ $classroom->description }}')">تعديل</button>
                         <a href="{{ route('deleteClassroom',$classroom->id) }}"><button>حذف</button></a>
                         <a href={{ route('classrooms') }}><button>الغاء</button></a>
                     </div>
@@ -37,9 +37,7 @@
                     </div>
                     
                         <div class="description-div">
-                            hhhhh hhhhh bkbkjbk kjkn lknn
-                            jhjhkjhkj lkjlhl puuiyfhgbl
-
+                            {{ $classroom->description }}
                         </div>
                     <div class="students-teachers-tables-div">
                         <div class="students-table">
@@ -88,6 +86,44 @@
 
 
             </div>
+
+
+
+            {{-- -------------- تعديل ---------- --}}
+<div class="edit-container-div" id="edit-page-id">
+     <form  class="container-div classrooms-inputs-div" action="{{ route('editClassroom',$classroom->id) }}" method="POST">
+                    @csrf
+
+                    
+                        {{-- -----الاسم------- --}}
+                        <div class="input-label-div">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name_edit" name="name">
+                        </div>
+                        {{-- ---------------- --}}
+                        {{-- -------الوصف----- --}}
+                        <div class="input-label-div">
+                            <label for="description">الوصف</label>
+                            <textarea type="text" id="description_edit" name="description"></textarea>
+                        </div>
+                        {{-- ---------------- --}}
+
+                        {{-- -----السعة------- --}}
+                        <div class="input-label-div">
+                            <label for="capacity">السعة</label>
+                            <input type="number" id="capacity_edit" name="capacity">
+                        </div>
+                        {{-- ---------------- --}}
+                    
+                    <div class="buttons-div">
+                        <button type="submit">تعديل</button>
+                        <button onclick="hideClassroomEdit()" type="button">الغاء</button>
+
+                    </div>
+                </form> 
+</div>
+            
+              
 
         </div>
     </body>

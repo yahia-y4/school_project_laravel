@@ -29,6 +29,7 @@ class ClassroomsController extends Controller
 
     public function store(Request $req)
     {
+
     $req->validate([
         'name' => 'required|string|max:255',
         'description' => 'nullable|string',
@@ -49,5 +50,14 @@ class ClassroomsController extends Controller
     public function delete($id){
      Classroom::find($id)->delete();
         return redirect('/dashboard/classrooms/');
+    }
+
+    public function edit(Request $req, $id ){
+        $classroom = Classroom::find($id);
+        $classroom->name = $req->name;
+        $classroom->description = $req->description;
+        $classroom->capacity = $req->capacity;
+        $classroom->save();
+        return redirect('/dashboard/classrooms/one/'.$id);
     }
 }
