@@ -19,6 +19,9 @@ class ClassroomsController extends Controller
     }
     public function showClassInfo($id){
         $classroom = Classroom::find($id);
+        if(!$classroom) {
+            return redirect('/dashboard/classrooms');
+            }
         $students =  Student::where("classroom_id",$id)->get();
     
          $teachers = Teacher::where("classroom_id",$id)->get();
@@ -54,6 +57,9 @@ class ClassroomsController extends Controller
 
     public function edit(Request $req, $id ){
         $classroom = Classroom::find($id);
+        if(!$classroom) {
+             return redirect('/dashboard/classrooms/one/'.$id);
+        }
         $classroom->name = $req->name;
         $classroom->description = $req->description;
         $classroom->capacity = $req->capacity;

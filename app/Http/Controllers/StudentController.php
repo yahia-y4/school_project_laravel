@@ -45,7 +45,5 @@ class StudentController extends Controller
       return redirect('/dashboard/students/');
       }
      return redirect('/dashboard/students/');
-
-
     } 
 }
