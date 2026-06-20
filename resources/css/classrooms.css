@@ -31,7 +31,8 @@
 .students-teachers-tables-div{
     display: flex;
     width: 100%;
-    height: 400px;
+    height: fit-content;
+
 
 }
 .students-teachers-tables-div div{

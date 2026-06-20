@@ -47,6 +47,7 @@
                                     <tr>
                                         <th>id</th>
                                         <th>الاسم</th>
+                                        <th>تاريخ الميلاد</th>
 
                                     </tr>
                                 </thead>
@@ -55,6 +56,7 @@
                                         <tr>
                                             <td>{{ $std->id }}</td>
                                             <td>{{ $std->name }}</td>
+                                            <td>{{ $std->birth_date}}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -67,6 +69,7 @@
                                     <tr>
                                         <th>id</th>
                                         <th>الاسم</th>
+                                        <th>التخصص</th>
 
                                     </tr>
                                 </thead>
@@ -75,6 +78,7 @@
                                         <tr>
                                             <td>{{ $teacher->id }}</td>
                                             <td>{{ $teacher->name }}</td>
+                                            <td>{{ $teacher->specialization }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
