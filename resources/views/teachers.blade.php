@@ -91,7 +91,7 @@
                                         <td>{{ $teacher->name }}</td>
                                         <td>{{ $teacher->email }}</td>
                                         <td>{{ $teacher->phone }}</td>
-                                        <td>{{ $teacher->birth_date }}</td>
+                                        <td>{{ $teacher->specialization }}</td>
                                         @foreach ($classrooms as $classroom)
                                             @if ($classroom->id == $teacher->classroom_id)
                                                 <td>{{ $classroom->name }}</td>

@@ -24,7 +24,7 @@ class ClassroomsController extends Controller
             }
         $students =  Student::where("classroom_id",$id)->get();
     
-         $teachers = Teacher::where("classroom_id",$id)->get();
+        $teachers = Teacher::where("classroom_id",$id)->get();
       
         return view("classroomInfo", compact("classroom","students","teachers"));
        
