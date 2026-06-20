@@ -142,8 +142,8 @@
                 {{-- ---------------- --}}
                 {{-- -----تاريخ الميلاد------- --}}
                 <div class="input-label-div">
-                    <label for="specialization">تاريخ الميلاد</label>
-                    <input type="date" id="specialization_edit" name="specialization">
+                    <label for="specialization">التخصص </label>
+                    <input  id="specialization_edit" name="specialization">
                 </div>
                 {{-- ---------------- --}}
                 {{-- -----الرقم------- --}}
